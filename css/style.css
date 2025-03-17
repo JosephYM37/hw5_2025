@@ -211,7 +211,7 @@ Edit the nav/nav_links elements so that they are spaced according to the image a
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
+        gap: 150px;
     }
  /* Step 18:
 Edit the pricing class so that the elements align along the bottom.  
@@ -226,21 +226,24 @@ The card elements should have a solid border 2px of #45ADDD and use
 flex-basis of 325px. */
 
     .card {
-         background: #288088;
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
  /* Step 20:
 No part of the gallery should be visible.*/
-    .gallery {
-        display: none;
-    }
-    h2.gallery-title {
-        display: none;
-    }
+#gallery, .gallery {
+    display: none;
+}
+footer {
+    page-break-before: always;
+}
  /* Step 20:
     Without using list-style-type add the thumbs up entity as shown in the cards. 
     This is a challenge problem. You should not give or receive help when completing 
     it.**For some people the thumbs up is not printing as yellow. That is fine.
 }.*/
+.card li:nth-child(2)::after {
+    content: " \1F44D"; /* Unicode for thumbs up 👍 */
+    font-size: 24px; /* Adjust size if needed */
+}
 }
