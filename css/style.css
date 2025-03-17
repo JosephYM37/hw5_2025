@@ -105,9 +105,9 @@ use flex and the cards should be centered both horizontally and vertically. */
 
 .pricing {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: center; /* Centers cards horizontally */
+    align-items: center; /* Centers cards vertically */
+    flex-wrap: wrap; 
 }
 /* Step 9:
 Style the images in the gallery class. These elements will have a 
@@ -235,7 +235,7 @@ No part of the gallery should be visible.*/
     display: none;
 }
 footer {
-    page-break-before: always;
+    page-break-before: always; 
 }
  /* Step 20:
     Without using list-style-type add the thumbs up entity as shown in the cards. 
@@ -244,6 +244,6 @@ footer {
 }.*/
 .card li:nth-child(2)::after {
     content: " \1F44D"; /* Unicode for thumbs up 👍 */
-    font-size: 24px; /* Adjust size if needed */
+    font-size: 24px; 
 }
 }
